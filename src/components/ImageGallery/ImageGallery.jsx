@@ -9,10 +9,10 @@ import Loader from '../Loader/Loader';
 import Modal from '../Modal/Modal';
 
 const Status = {
-  IDLE: 'idle', //  простой, стоит и ничего не делает
-  PENDING: 'pending', // ожидается выполнение
-  RESOLVED: 'resolved', // выполнилось с результатом хорошо
-  REJECTED: 'rejected', // отклонено
+  IDLE: 'idle',
+  PENDING: 'pending',
+  RESOLVED: 'resolved',
+  REJECTED: 'rejected',
 };
 
 class ImageGallery extends Component {
@@ -27,13 +27,9 @@ class ImageGallery extends Component {
     lastPage: 1,
   };
 
-  // когда компонент обновляется
   componentDidUpdate(prevProps, prevState) {
     const { searchImageName } = this.props;
 
-    // всегда нужно делать проверку, потому что может зациклить компонент!
-    // предыдущий пропс имг и следующий(текущий) пропс имг
-    // старый рендет-новый рендер
     if (prevProps.searchImageName !== searchImageName) {
       this.setState({ images: [] }, () => {
         this.loadImages(1);
@@ -98,10 +94,6 @@ class ImageGallery extends Component {
       return <div className="errorMessage">Please enter your request</div>;
     }
 
-    // if (status === Status.PENDING) {
-    //   return <Loader />;
-    // }
-
     if (status === Status.REJECTED) {
       return <h1>{error.message}</h1>;
     }
@@ -114,10 +106,6 @@ class ImageGallery extends Component {
               <ImageGalleryItem
                 key={`image-item-image-${image.id}`}
                 onModalOpen={this.onModalOpen}
-                // webformatURL={image.webformatURL}
-                // tags={image.tags}
-                // largeImageURL={image.largeImageURL}
-                // {...image}
                 image={image}
               />
             ))}

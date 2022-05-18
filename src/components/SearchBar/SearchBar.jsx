@@ -11,15 +11,12 @@ class Searchbar extends Component {
     this.setState({ searchImageName: e.currentTarget.value.toLowerCase() });
   };
 
-  // при сабмите формы
   handleSubmit = e => {
     const { searchImageName } = this.state;
 
     e.preventDefault();
 
-    // trim - слева и справа обрезает пробелы у строк
     if (searchImageName.trim() === '') {
-      //  return toast.error('What picture do you need?');
       toast.error('What picture do you need?');
       return;
     }
@@ -33,7 +30,7 @@ class Searchbar extends Component {
 
     return (
       <header className="Searchbar">
-        {/* onSubmit - регистрация на событии сабмита на встроенном компоненте form */}
+        {}
         <form className="SearchForm" onSubmit={this.handleSubmit}>
           <button type="submit" className="SearchForm-button">
             <span className="SearchForm-button-label">Search</span>
