@@ -22,6 +22,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import Searchbar from './SearchBar/SearchBar';
 import ImageGallery from './ImageGallery/ImageGallery';
+import './App.css'
 
 
 
@@ -41,7 +42,7 @@ class App extends Component {
       <div className="App">
         <ToastContainer />
 
-        {/* в Searchbar передаю проп submit(имя пропса), куда я передаю ссылку на метод handleFormSubmit */}
+        {}
         <Searchbar submit={this.handleFormSubmit} />
         <ImageGallery searchImageName={searchImageName} />
       </div>

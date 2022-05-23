@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './Modal.css'
+
 class Modal extends Component {
   handleKeyDown = e => {
     if (e.keyCode === 27) {
@@ -30,7 +32,7 @@ class Modal extends Component {
     return (
       <div className="Overlay" onClick={this.handleBackdropClick}>
         <div className="Modal">
-          <img src={largeImageURL} alt={tags} className="modalImg" />
+          <img src={largeImageURL} alt={tags} className="ModalImg" />
         </div>
       </div>
     );

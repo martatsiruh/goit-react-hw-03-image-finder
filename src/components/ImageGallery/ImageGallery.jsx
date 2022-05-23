@@ -7,6 +7,7 @@ import ImageGalleryItem from './ImageGalleryItem/ImageGalleryItem';
 import Button from '../Button/Button';
 import Loader from '../Loader/Loader';
 import Modal from '../Modal/Modal';
+import './ImageGallery.css'
 
 const Status = {
   IDLE: 'idle',

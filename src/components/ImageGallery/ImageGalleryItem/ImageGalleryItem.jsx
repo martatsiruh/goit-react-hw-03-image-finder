@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './ImageGalleryItem.css'
 
 const ImageGalleryItem = ({
   image: { webformatURL, tags },
