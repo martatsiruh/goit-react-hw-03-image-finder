@@ -1,5 +1,7 @@
 import { MutatingDots } from 'react-loader-spinner'
 
+import './Loader.css'
+
 const LoaderSpinner = () => (
   <div role="alert" className="loader">
     <MutatingDots 
