@@ -1,5 +1,5 @@
 /*export const App = () => {
-  return (
+ /* return (
     <div
       style={{
         height: '100vh',
@@ -50,15 +50,4 @@ class App extends Component {
   }
 }
 
-//PureComponent и shouldComponentUpdate
-
 export default App;
-
-// --------------------
-// API - bk
-
-// const fn = a => {
-//   return console.log(a);
-// };
-// fn('2');
-// fn('a');
